@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Mega Man Animación</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    #contenedor{
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .fondo{
+        width: 200%;
+        height: 100%;
+        background: url("img/fondo.gif") repeat-x;
+        background-size: 400px 200px; /* 🔥 AJUSTE DE TAMAÑO */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        animation: moverFondo 5s linear infinite;
+    }
+
+    @keyframes moverFondo{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-50%);
+        }
+    }
+
+    /*MEGAMAN */
+    #cuadrito{
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        z-index: 1;
+
+        animation: moverMega 2s linear infinite;
+    }
+
+    @keyframes moverMega{
+        from{
+            left: -200px;
+        }
+        to{
+            left: 500px;
+        }
+    }
+
+    #cuadrito img{
+        width: 100%;
+        height: 110%;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div id="contenedor">
+
+        <div class="fondo"></div>
+
+        <div id="cuadrito">
+            <img src="img/megaman.gif" alt="">
+        </div>
+
+    </div>
+
+</body>
+</html>
