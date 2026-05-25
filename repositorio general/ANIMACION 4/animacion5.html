@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Cohete Espacial</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    #contenedor{
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        position:relative;
+        margin:0 auto;
+        overflow: hidden;
+        background: black;
+    }
+
+    /* ⭐ ESTRELLAS DISPERSAS EN DIAGONAL */
+    #contenedor::before{
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -20%;
+        left: -50%;
+
+        background-image:
+            radial-gradient(white 1px, transparent 1px),
+            radial-gradient(white 2px, transparent 2px),
+            radial-gradient(white 1.5px, transparent 1.5px);
+
+        background-size: 
+            60px 60px,
+            100px 100px,
+            80px 80px;
+
+        background-position:
+            0 0,
+            50px 50px,
+            70px 40px;
+
+        animation: estrellas  2s linear infinite;
+    }
+
+    /* 🔥 MOVIMIENTO DIAGONAL */
+    @keyframes estrellas{
+        from{
+            transform: translate(0, 0);
+        }
+        to{
+            transform: translate(-60px, 60px);
+        }
+    }
+
+    /* 🚀 CONTENEDOR DEL COHETE */
+    #cohete{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    /* 🚀 GIF DEL COHETE */
+    #cohete img{
+        width: 120px;
+        transform: rotate(-25deg); /* inclinación */
+        display: block;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div id="contenedor">
+
+        <!-- 🚀 COHETE -->
+        <div id="cohete">
+            <img src="img/cohete.gif">
+        </div>
+
+    </div>
+
+</body>
+</html>
