@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIP PATH CSS</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            background-color: black;
+        }
+        .contenedor{
+            width: 400px;
+            height: 700px;
+            background-color: skyblue;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .gorrito{
+            width: 100px;   
+            height: 106px;
+            background-image: url(img/gorro.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            position: absolute;
+            left: 150px;
+            top: 100px; 
+        }
+        .cabeza{
+            width: 100px;   
+            height: 105px;
+            background-image: url(img/cara.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: circle(50% at 50% 50%);
+            position: absolute;
+            left: 150px;
+            top: 200px; 
+        }
+        .cuerpo{
+            width: 90px;   
+            height: 160px;
+            background-image: url(img/cuerpo.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 99%);
+            position: absolute;
+            left: 155px;
+            top: 300px; 
+        }
+        .brazoD{
+            width: 110px;   
+            height: 50px;
+            background-image: url(img/brazo\ derecho.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+           clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            position: absolute;
+            left: 220px;
+            top: 300px; 
+        }
+        .brazoI{
+            width: 110px;   
+            height: 50px;
+            background-image: url(img/brazo\ izquierdo.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+            position: absolute;
+            left: 70px;
+            top: 300px; 
+        }
+        .pieD{
+            width: 110px;   
+            height: 100px;
+            background-image: url(img/pierna\ derecha.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: ellipse(43% 24% at 50% 56%);
+            position: absolute;
+            left: 100px;
+            top: 415px; 
+        }
+        .pieI{
+            width: 110px;   
+            height: 100px;
+            background-image: url(img/pierna\ izquierda.jfif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: ellipse(43% 24% at 50% 56%);
+            position: absolute;
+            left: 195px;
+            top: 415px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class ="contenedor">
+        <div class ="gorrito"></div>
+        <div class ="cabeza"></div>
+        <div class ="cuerpo"></div>
+        <div class ="brazoD"></div>
+        <div class ="brazoI"></div>
+        <div class ="pieD"></div>
+        <div class ="pieI"></div>
+    </div>
+    
+    
+</body>
+</html>
