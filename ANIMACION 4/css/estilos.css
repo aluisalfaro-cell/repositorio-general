@@ -1,0 +1,154 @@
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("img/fondo_sem4.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding: 40px;
+    
+    }
+
+    
+    #contenedor{
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        position:relative;
+        margin:0 auto; /*centrar el contenedor*/
+        overflow: hidden; /*oculta todo lo que contiene*/
+    }
+    #cuadrito{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute; /*obligatorio para mover el div*/
+        top: 50px;
+        left: -100px;
+
+        animation: cuadrito 3s infinite;
+        animation-timing-function: linear; /*define la forma de moverse*/
+    }
+    @keyframes cuadrito{
+        from{
+            left: -100;
+
+        }
+        to{
+            left: 500px;
+
+        }
+        
+    }
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(255,255,255,0.2);
+
+    animation: aparecer 1.5s ease;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card{
+    width: 280px;
+
+    background: rgba(30,41,59,0.85);
+
+    backdrop-filter: blur(6px);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.4s;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,0.4);
+
+    animation: aparecer 1s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+
+    background: rgba(51,65,85,0.95);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card h2{
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+    .volver{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #224c54;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}

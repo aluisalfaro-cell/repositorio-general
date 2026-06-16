@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>ANIMACION 3</title>
+    <style>
+         *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("img/fondo_archivos.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding: 40px;
+        }
+
+        .contenedor{
+            width:400px;
+            height: 200px;
+            border:1px solid black;
+            position: relative;/*provoca el centrado del div contenedor*/
+            margin:0 auto;/*provoca el centrado del div contenedor*/
+            overflow: hidden;
+            background-image: url(img/campo.jpg);
+            background-size: cover;
+
+        }
+        .cuadrito{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -100px;
+            top: 50px;
+            animation: cuadrito 3s infinite;
+        }
+        .cuadrito2{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -50px;
+            top: 30px;
+            animation: cuadrito 4s infinite;
+        }
+
+        @keyframes cuadrito{
+            0%{
+                left: -100px;
+                top: 50px;
+                rotate: 0deg;
+            }
+            50%{
+                left: 175px;
+                top: 0px;
+                rotate: 60deg;
+            }   
+            100%{
+                left: 400px;
+                top: 150px;
+                rotate: 0deg;
+            }
+        }
+        
+        @keyframes cuadrito2{
+            0%{
+                left: -50px;
+                top: 0px;
+                rotate: 0deg;
+            }
+            50%{
+                left: 175px;
+                top: 150px;
+                rotate: 60deg;
+            }
+        }
+
+        .cuadrito img{
+            width: 50px;
+            height: 50px;
+        }
+
+        .cuadrito2 img{
+            width: 50px;
+            height: 50px;
+        }
+    .volver{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #224c54;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    </style>
+
+    <a href="../index.html" class="volver">Volver al Inicio</a>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cuadrito"><img src="img/abeja.webp" alt=""></div> 
+        <div class="cuadrito2"><img src="img/abejita.png" alt=""></div>
+            
+
+    </div>
+    <audio autoplay loop>
+    <source src="../audio/musica.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>

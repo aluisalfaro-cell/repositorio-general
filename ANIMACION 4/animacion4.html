@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Mega Man Animación</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    
+    body{
+        
+            
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("img/fondo_archivos.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding: 40px;
+    }
+
+    #contenedor{
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .fondo{
+        width: 200%;
+        height: 100%;
+        background: url("img/fondo.gif") repeat-x;
+        background-size: 400px 200px; /* 🔥 AJUSTE DE TAMAÑO */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        animation: moverFondo 5s linear infinite;
+    }
+
+    @keyframes moverFondo{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-50%);
+        }
+    }
+
+    /*MEGAMAN */
+    #cuadrito{
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        z-index: 1;
+
+        animation: moverMega 2s linear infinite;
+    }
+
+    @keyframes moverMega{
+        from{
+            left: -200px;
+        }
+        to{
+            left: 500px;
+        }
+    }
+
+    #cuadrito img{
+        width: 100%;
+        height: 110%;
+    }
+    
+    .volver{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #224c54;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    </style>
+
+        <a href="../ANIMACION 4/index.html" class="volver">Volver al Inicio</a>
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+
+        <div class="fondo"></div>
+
+        <div id="cuadrito">
+            <img src="img/megaman.gif" alt="">
+        </div>
+
+    </div>
+<audio autoplay loop>
+    <source src="../audio/musica.mp3" type="audio/mpeg">
+</audio>
+
+
+</body>
+</html>

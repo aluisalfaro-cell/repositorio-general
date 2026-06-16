@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title></title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        
+            
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("img/fondo_archivos.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+
+    padding: 40px;
+    }
+    #contenedor{
+        width: 400px;
+        height: 200px;
+        border: 10px solid black;
+        position:relative;
+        margin:0 auto; /*centrar el contenedor*/
+        overflow: hidden; /*oculta todo lo que contiene*/
+    }
+    #cuadrito{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(160, 8, 21);
+        position: absolute; /*obligatorio para mover el div*/
+        top: 50px;
+        right: -100px;
+
+        animation: cuadrito 3s infinite;
+        animation-timing-function: linear; /*define la forma de moverse*/
+    }
+    @keyframes cuadrito{
+        from{
+            right: -100;
+
+        }
+        to{
+            right: 500px;
+
+        }
+        
+    }
+    
+    .volver{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #224c54;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+
+        <div id="cuadrito"></div>
+
+    </div>
+
+    <audio autoplay loop>
+    <source src="../audio/musica.mp3" type="audio/mpeg">
+</audio>
+
+    <a href="../ANIMACION 4/index.html" class="volver">Volver al Inicio</a>
+
+</body>
+</html>
